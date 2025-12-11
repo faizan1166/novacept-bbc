@@ -1,0 +1,53 @@
+export function BurgerIcons() {
+  return (
+    <svg width="50" height="30" viewBox="0 0 80 48" fill="none">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M66.8517 32.0842C68.5359 29.8276 69.5329 27.0282 69.5329 23.996C69.5329 16.5202 63.4727 10.46 55.9969 10.46C48.5212 10.46 42.4609 16.5202 42.4609 23.996C42.4609 31.4717 48.5212 37.532 55.9969 37.532C58.9975 37.532 61.77 36.5557 64.0141 34.9034L69.0904 39.9796L71.9188 37.1512L66.8517 32.0842ZM63.1568 30.3569C64.6606 28.6654 65.5741 26.4374 65.5741 23.996C65.5741 18.7066 61.2863 14.4188 55.9969 14.4188C50.7076 14.4188 46.4197 18.7066 46.4197 23.996C46.4197 29.2853 50.7076 33.5732 55.9969 33.5732C58.4383 33.5732 60.6664 32.6597 62.3579 31.1558L63.1568 30.3569Z"
+        fill="currentColor"
+      ></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M35.7184 33.6973H10.0254V37.6973H38.0738C37.1617 36.4525 36.3708 35.1133 35.7184 33.6973Z"
+        fill="currentColor"
+      ></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M33.6848 21.998H10.0273V25.998H33.6845C33.6283 25.3394 33.5996 24.673 33.5996 23.9998C33.5996 23.3254 33.6284 22.6578 33.6848 21.998Z"
+        fill="currentColor"
+      ></path>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M38.0747 10.2998H10.0273V14.2998H35.7186C36.3712 12.8837 37.1624 11.5446 38.0747 10.2998Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
+}
+
+export function UserIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 19 18"
+      fill="none"
+      category="account"
+      icon="account-signed-out"
+      className="sc-583246d7-0 jUqtCV"
+    //   style="fill: none; height: 20px; pointer-events: none;"
+    >
+      <path
+        clipRule="evenodd"
+        d="M9.5 9.843A4.431 4.431 0 015 5.483a4.431 4.431 0 014.5-4.358A4.431 4.431 0 0114 5.484a4.431 4.431 0 01-4.5 4.36v0zm-7.875 7.032c0-3.31 4.23-5.625 7.883-5.625 3.637 0 7.867 2.317 7.867 5.621 0 .003-15.75.004-15.75.003v0z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      ></path>
+    </svg>
+  );
+}

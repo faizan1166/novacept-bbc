@@ -1,0 +1,299 @@
+
+.footer {
+  background-color: #f9f9f9;
+  border-top: 1px solid #000;
+  padding: 32px 0 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logoSection {
+  margin-bottom: 18px;
+}
+
+.logoContainer {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.logoBlock {
+  background-color: #000;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.navLink {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #404040;
+  text-decoration: underline;
+}
+
+.mobileNav {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* border-top: 1px solid #ddd; */
+}
+
+.mobileNavList li {
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.mobileNavLink {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 0;
+  transition: background-color 0.15s;
+}
+
+.mobileNavLink:hover {
+  background-color: #f0f0f0;
+}
+
+.languageSelector {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.languageButton {
+  background-color: #e4e4e4;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+
+.languageButton:hover {
+  background-color: #d8d8d8;
+}
+
+.languageButton svg {
+  transition: transform 0.2s;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+}
+
+.languageDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.languageLink {
+  display: block;
+  padding: 12px 16px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.15s;
+}
+
+.languageLink:last-child {
+  border-bottom: none;
+}
+
+.languageLink:hover {
+  background-color: #f9f9f9;
+}
+
+.socialSection {
+  margin-bottom: 18px;
+}
+
+.socialTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  width: 36px;
+  height: 36px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.2s;
+  border-radius: 2px;
+}
+
+.socialLink:hover {
+  background-color: #404040;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 18px;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+.footerLinks span {
+  display: flex;
+  align-items: center;
+}
+
+.footerLink {
+  color: #404040;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+
+.footerLink:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* .separator {
+  width: 1px;
+  height: 12px;
+  background-color: #ccc;
+  margin: 0 12px;
+} */
+
+.copyright {
+  font-size: 13px;
+  color: #404040;
+  line-height: 1.6;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.externalLink {
+  color: #404040;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.externalLink:hover {
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 20px 0 20px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+
+  .desktopNav {
+    display: block;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  .languageButton {
+    width: auto;
+    min-width: 220px;
+  }
+
+  .languageDropdown {
+    right: auto;
+    width: 220px;
+  }
+
+  .socialSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .socialTitle {
+    margin-bottom: 0;
+  }
+
+  .footerLinks {
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navList {
+    gap: 20px 32px;
+  }
+
+  .navLink {
+    font-size: 15px;
+  }
+}
