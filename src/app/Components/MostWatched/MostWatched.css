@@ -1,0 +1,90 @@
+.most-watched-section {
+  background-color: #fff;
+  border-top: 2px solid #3a3c3e;
+}
+.most-watched-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.most-watched-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.most-watched-item {
+  transition: all 0.2s ease;
+}
+
+.most-watched-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.most-watched-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(138, 140, 142);
+  line-height: 0.9;
+}
+
+.most-watched-icon {
+  font-size: 14px;
+  color: #404040;
+  line-height: 1.4;
+}
+
+.most-watched-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000;
+  margin: 0;
+}
+
+.most-watched-link:hover .most-watched-item-title {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .most-watched-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .most-watched-title {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .most-watched-number {
+    font-size: 20px;
+  }
+
+  .most-watched-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .most-watched-title {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .most-watched-number {
+    font-size: 20px;
+  }
+
+  .most-watched-icon {
+    font-size: 12px;
+  }
+
+  .most-watched-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
