@@ -1,9 +1,9 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from "./Navbar.module.css";
 import { usePathname } from "next/navigation";
 import { BurgerIcons, UserIcon } from "../../assets/svgIocns";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -45,46 +45,45 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={styles.navbar}>
-        <div className={styles.navbarTop}>
+      <nav className="navbar pb-0">
+        <div className="navbar-top d-flex align-items-center justify-content-between w-100">
           <button
-            className={styles.menuButton}
+            className="menu-button"
             onClick={toggleSidebar}
             aria-label="Open menu"
           >
             <BurgerIcons />
           </button>
 
-          <Link href="/" className={styles.logo}>
-            <div className={styles.logoContainer}>
-              <span className={styles.logoBlock}>B</span>
-              <span className={styles.logoBlock}>B</span>
-              <span className={styles.logoBlock}>C</span>
+          <Link href="/" className="logo">
+            <div className="logo-container">
+              <span className="logo-block">B</span>
+              <span className="logo-block">B</span>
+              <span className="logo-block">C</span>
             </div>
           </Link>
 
-          <div className={styles.authButtons}>
-            <button className={styles.registerBtn}>Register</button>
-            <button className={styles.signInBtn}>Sign In</button>
+          <div className="auth-buttons">
+            <button className="register-btn">Register</button>
+            <button className="sign-in-btn">Sign In</button>
           </div>
-          <div className={styles.authDropdown}>
-            <a type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div className="auth-dropdown">
+            <button
+              type="button"
+              className="btn-user"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               <UserIcon />
-            </a>
-            <ul className={`dropdown-menu ${styles.dropdownNav}`}>
+            </button>
+            <ul className="dropdown-menu dropdown-nav">
               <li>
-                <a
-                  className={`dropdown-item ${styles.dropdownNavItem}`}
-                  href="#"
-                >
+                <a className="dropdown-item dropdown-nav-item" href="#">
                   Another action
                 </a>
               </li>
               <li>
-                <a
-                  className={`dropdown-item ${styles.dropdownNavItem}`}
-                  href="#"
-                >
+                <a className="dropdown-item dropdown-nav-item" href="#">
                   Something else here
                 </a>
               </li>
@@ -93,17 +92,17 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`${styles.desktopMenu} ${
-            scrollY < 80 ? styles.menuVisible : styles.menuHidden
+          className={`desktop-menu w-100 ${
+            scrollY <= 80 ? "menu-visible" : "menu-hidden"
           }`}
         >
-          <div className={styles.menuContainer}>
+          <div className="menu-container">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${styles.menuLink} ${
-                  pathname === item.href ? styles.menuLinkActive : ""
+                className={`menu-link ${
+                  pathname === item.href ? "menu-link-active" : ""
                 }`}
               >
                 {item.name}
@@ -112,39 +111,37 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {sidebarOpen && (
-        <div className={styles.overlay} onClick={toggleSidebar}></div>
-      )}
-      <div
-        className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ""}`}
-      >
+
+      {sidebarOpen && <div className="overlay" onClick={toggleSidebar}></div>}
+
+      <div className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
         <button
-          className={styles.closeButton}
+          className="close-button"
           onClick={toggleSidebar}
           aria-label="Close menu"
         >
           <i className="fa-solid fa-xmark"></i>
         </button>
 
-        <div className={styles.searchContainer}>
+        <div className="search-container">
           <input
             type="text"
-            className={styles.searchInput}
+            className="search-input"
             placeholder="Search news, topics and more"
           />
-          <button className={styles.searchButton}>
+          <button className="search-button">
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
 
-        <nav className={styles.sidebarNav}>
+        <nav className="sidebar-nav">
           {menuItems.map((item) => (
-            <div key={item.name} className={styles.sidebarMenuItem}>
-              <div className={styles.sidebarMenuItemHeader}>
+            <div key={item.name} className="sidebar-menu-item">
+              <div className="sidebar-menu-item-header">
                 <Link
                   href={item.href}
-                  className={`${styles.sidebarMenuLink} ${
-                    pathname === item.href ? styles.sidebarActive : ""
+                  className={`sidebar-menu-link ${
+                    pathname === item.href ? "sidebar-active" : ""
                   }`}
                   onClick={!item.hasSubmenu ? toggleSidebar : undefined}
                 >
@@ -152,46 +149,35 @@ export default function Navbar() {
                 </Link>
                 {item.hasSubmenu && (
                   <button
-                    className={styles.expandButton}
+                    className="expand-button"
                     onClick={() => toggleSubmenu(item.name)}
                     aria-label={`Expand ${item.name}`}
                   >
-                    <svg
-                      width="12"
-                      height="8"
-                      viewBox="0 0 12 8"
-                      fill="currentColor"
-                      className={
-                        expandedMenu === item.name ? styles.chevronRotated : ""
-                      }
-                    >
-                      <path
-                        d="M1 1L6 6L11 1"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        fill="none"
-                      />
-                    </svg>
+                    <i
+                      className={`fa-solid fa-chevron-down ${
+                        expandedMenu === item.name ? "chevron-rotated" : ""
+                      }`}
+                    ></i>
                   </button>
                 )}
               </div>
               {item.hasSubmenu && expandedMenu === item.name && (
-                <div className={styles.submenu}>
+                <div className="submenu">
                   <Link
                     href={`${item.href}/subcategory1`}
-                    className={styles.submenuLink}
+                    className="submenu-link"
                   >
                     Subcategory 1
                   </Link>
                   <Link
                     href={`${item.href}/subcategory2`}
-                    className={styles.submenuLink}
+                    className="submenu-link"
                   >
                     Subcategory 2
                   </Link>
                   <Link
                     href={`${item.href}/subcategory3`}
-                    className={styles.submenuLink}
+                    className="submenu-link"
                   >
                     Subcategory 3
                   </Link>

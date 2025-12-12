@@ -1,4 +1,3 @@
-
 .footer {
   background-color: #f9f9f9;
   border-top: 1px solid #000;
@@ -6,22 +5,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  max-width: 1280px;
+.footer-container {
+  max-width: var(--app-max-width);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 
-.logoSection {
+.logo-section {
   margin-bottom: 18px;
 }
 
-.logoContainer {
+.logo-container {
   display: inline-flex;
   gap: 3px;
 }
 
-.logoBlock {
+.logo-block {
   background-color: #000;
   color: #fff;
   width: 30px;
@@ -34,11 +33,11 @@
   letter-spacing: -1px;
 }
 
-.desktopNav {
+.desktop-nav {
   display: none;
 }
 
-.navList {
+.nav-list {
   list-style: none;
   padding: 0;
   margin: 0 0 18px 0;
@@ -47,7 +46,7 @@
   gap: 8px 12px;
 }
 
-.navLink {
+.nav-link {
   color: #000;
   text-decoration: none;
   font-size: 14px;
@@ -55,28 +54,27 @@
   transition: color 0.2s;
 }
 
-.navLink:hover {
+.nav-link:hover {
   color: #404040;
   text-decoration: underline;
 }
 
-.mobileNav {
+.mobile-nav {
   display: block;
   margin-bottom: 18px;
 }
 
-.mobileNavList {
+.mobile-nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  /* border-top: 1px solid #ddd; */
 }
 
-.mobileNavList li {
-  /* border-bottom: 1px solid #ddd; */
+.mobile-nav-list li:last-child {
+  border-bottom: none;
 }
 
-.mobileNavLink {
+.mobile-nav-link {
   display: block;
   color: #000;
   text-decoration: none;
@@ -86,16 +84,16 @@
   transition: background-color 0.15s;
 }
 
-.mobileNavLink:hover {
+.mobile-nav-link:hover {
   background-color: #f0f0f0;
 }
 
-.languageSelector {
+.language-selector {
   margin-bottom: 18px;
   position: relative;
 }
 
-.languageButton {
+.language-button {
   background-color: #e4e4e4;
   border: none;
   padding: 10px 16px;
@@ -111,19 +109,16 @@
   transition: background-color 0.2s;
 }
 
-.languageButton:hover {
+.language-button:hover {
   background-color: #d8d8d8;
 }
 
-.languageButton svg {
+.language-button svg {
   transition: transform 0.2s;
+  flex-shrink: 0;
 }
 
-.chevronRotated {
-  transform: rotate(180deg);
-}
-
-.languageDropdown {
+.language-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -135,7 +130,7 @@
   margin-top: 4px;
 }
 
-.languageLink {
+.language-link {
   display: block;
   padding: 12px 16px;
   color: #000;
@@ -145,80 +140,50 @@
   transition: background-color 0.15s;
 }
 
-.languageLink:last-child {
+.language-link:last-child {
   border-bottom: none;
 }
 
-.languageLink:hover {
+.language-link:hover {
   background-color: #f9f9f9;
 }
 
-.socialSection {
+.social-section {
   margin-bottom: 18px;
 }
 
-.socialTitle {
+.social-title {
   font-size: 14px;
   font-weight: 600;
   color: #000;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
-.socialLinks {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.socialLink {
-  width: 36px;
-  height: 36px;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.2s;
-  border-radius: 2px;
-}
-
-.socialLink:hover {
-  background-color: #404040;
-}
-
-.footerLinks {
+.footer-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0px 18px;
   margin-bottom: 18px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-.footerLinks span {
+.footer-links span {
   display: flex;
   align-items: center;
 }
 
-.footerLink {
+.footer-link {
   color: #404040;
   text-decoration: none;
   transition: color 0.2s;
   padding: 4px 0;
 }
 
-.footerLink:hover {
+.footer-link:hover {
   color: #000;
   text-decoration: underline;
 }
-
-/* .separator {
-  width: 1px;
-  height: 12px;
-  background-color: #ccc;
-  margin: 0 12px;
-} */
 
 .copyright {
   font-size: 13px;
@@ -232,54 +197,52 @@
   margin: 0;
 }
 
-.externalLink {
+.external-link {
   color: #404040;
   text-decoration: underline;
   transition: color 0.2s;
 }
 
-.externalLink:hover {
+.external-link:hover {
   color: #000;
 }
-
 @media (min-width: 768px) {
   .footer {
     padding: 20px 0 20px;
   }
 
-  .container {
-    padding: 0 32px;
-  }
-
-  .desktopNav {
+  .desktop-nav {
     display: block;
+    margin-bottom: 18px;
   }
 
-  .mobileNav {
+  .mobile-nav {
     display: none;
   }
 
-  .languageButton {
+  .language-button {
     width: auto;
     min-width: 220px;
   }
 
-  .languageDropdown {
+  .language-dropdown {
     right: auto;
     width: 220px;
   }
 
-  .socialSection {
+  .social-section {
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-bottom: 18px;
   }
 
-  .socialTitle {
+  .social-title {
     margin-bottom: 0;
+    white-space: nowrap;
   }
 
-  .footerLinks {
+  .footer-links {
     font-size: 12px;
   }
 
@@ -289,11 +252,11 @@
 }
 
 @media (min-width: 1024px) {
-  .navList {
+  .nav-list {
     gap: 20px 32px;
   }
 
-  .navLink {
+  .nav-link {
     font-size: 15px;
   }
 }

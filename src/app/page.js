@@ -1,21 +1,5 @@
-export default function Home() {
-  return (
-    <main className="container my-4">
-      <h4>Home - BBC News (POC)</h4>
+import NewsLayout from "./Components/News/NewsLayout";
 
-      <p>This is where your content goes.</p>
-            <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-      <p>This is where your content goes.</p>
-
-    </main>
-  );
+export default function page() {
+  return <NewsLayout />;
 }
