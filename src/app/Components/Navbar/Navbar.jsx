@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BurgerIcons, UserIcon } from "../../assets/svgIocns";
+import { BurgerIcons, UserIcon } from "../../../../public/assets/svgIocns";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -67,7 +67,7 @@ export default function Navbar() {
             <button className="register-btn">Register</button>
             <button className="sign-in-btn">Sign In</button>
           </div>
-          <div className="auth-dropdown">
+          <div className="auth-dropdown position-relative dropdown">
             <button
               type="button"
               className="btn-user"
@@ -76,15 +76,15 @@ export default function Navbar() {
             >
               <UserIcon />
             </button>
-            <ul className="dropdown-menu dropdown-nav">
+            <ul className="dropdown-menu dropdown-nav ">
               <li>
                 <a className="dropdown-item dropdown-nav-item" href="#">
-                  Another action
+                  Sign In
                 </a>
               </li>
               <li>
                 <a className="dropdown-item dropdown-nav-item" href="#">
-                  Something else here
+                  Register
                 </a>
               </li>
             </ul>
@@ -167,19 +167,13 @@ export default function Navbar() {
                     href={`${item.href}/subcategory1`}
                     className="submenu-link"
                   >
-                    Subcategory 1
+                    {item.name} Subcategory 1
                   </Link>
                   <Link
                     href={`${item.href}/subcategory2`}
                     className="submenu-link"
                   >
-                    Subcategory 2
-                  </Link>
-                  <Link
-                    href={`${item.href}/subcategory3`}
-                    className="submenu-link"
-                  >
-                    Subcategory 3
+                    {item.name} Subcategory 2
                   </Link>
                 </div>
               )}

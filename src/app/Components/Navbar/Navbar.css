@@ -48,7 +48,6 @@
   justify-content: center;
   font-weight: bold;
   font-size: 22px;
-  font-family: "BBC Reith", Arial, Helvetica, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -354,6 +353,10 @@
 .dropdown-nav-item:hover {
   background-color: #fff;
   color: #000;
+}
+.auth-dropdown .dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: unset;
 }
 
 /* Responsive Design */
