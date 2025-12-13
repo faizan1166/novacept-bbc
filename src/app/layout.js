@@ -10,6 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="/css/novacept.css" />
+      </head>
       <body>
         <Navbar />
         <div className="layout-content-wrapper">{children}</div>

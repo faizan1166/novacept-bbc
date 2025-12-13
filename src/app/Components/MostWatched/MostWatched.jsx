@@ -1,5 +1,4 @@
 import React from "react";
-import "./MostWatched.css";
 
 export default function MostWatched({ title = "MOST WATCHED", items = [] }) {
   return (

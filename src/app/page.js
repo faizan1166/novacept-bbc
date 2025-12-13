@@ -1,6 +1,6 @@
 import NewsLayout from "./Components/News/NewsLayout";
 import { textFormatter } from "./helpers";
-import { newsData } from "./News";
+import { newsData } from "./data/News";
 
 export default function page() {
   return (

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BurgerIcons, UserIcon } from "../../../../public/assets/svgIocns";
-import "./Navbar.css";
 
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -102,7 +101,9 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`menu-link ${
-                  pathname === item.href ? "menu-link-active" : ""
+                  pathname === item.href || pathname.includes(item.href)
+                    ? "menu-link-active"
+                    : ""
                 }`}
               >
                 {item.name}
@@ -141,7 +142,9 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className={`sidebar-menu-link ${
-                    pathname === item.href ? "sidebar-active" : ""
+                    pathname === item.href || pathname.includes(item.href)
+                      ? "sidebar-active"
+                      : ""
                   }`}
                   onClick={!item.hasSubmenu ? toggleSidebar : undefined}
                 >
